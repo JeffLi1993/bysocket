@@ -94,7 +94,7 @@ h1, h2, h3, h4, h5 {
 	-moz-transition: -moz-transform 2s ease-out;
 	-o-transition: -o-transform 2s ease-out;
 	-ms-transition: -ms-transform 2s ease-out;
-    background-image: url("head-bysocket.png");
+    background-image: url("http://www.bysocket.com/wp-content/uploads/2017/01/bysocket-1.png");
 }
 .head-img:hover {
 	-webkit-transform: rotateZ(360deg);
