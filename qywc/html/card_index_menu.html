@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+
+        <title>子木的微名片</title>
+
+        <!-- 顶部头像 -->
+        <style type="text/css">
+
+        .head-grids {
+          width: 100%;
+          vertical-align: middle;
+          text-align: center;
+        }
+
+        .head-grid {
+          display: inline-block;
+          vertical-align: middle;
+        }
+
+        .weui-cell__ft1 {
+          padding-right: 13px;
+        }
+
+        .weui-cell__ft1:after {
+          position: absolute;
+          top: 50%;
+          margin-top: -4px;
+          left: 200px;
+          transform: matrix(.71,.71,-.71,.71,0,0);
+          content: " ";
+          display: inline-block;
+          height: 6px;
+          width: 6px;
+          border-width: 2px 2px 0 0;
+          border-color: #c8c8cd;
+          border-style: solid;
+        }
+/*
+        .head-image {
+            height: 130px;
+            float: left;
+            width: 40%;
+            margin: 20px auto;
+            background-size: 130px 130px;
+            background-image: url(http://www.bysocket.com/resume/resume-static/head-bysocket.png);
+        }*/
+        </style>
+
+        <!-- 底部 bar -->
+        <script type="text/javascript">
+            $(function(){
+                $('.weui-navbar__item').on('click', function () {
+                    $(this).addClass('weui-bar__item_on').siblings('.weui-bar__item_on').removeClass('weui-bar__item_on');
+                });
+            });
+        </script>
+
+        <!-- Menu -->
+        <script src="style/menu/js/jquery-1.9.1.min.js"></script>
+        <script src="style/menu/js/jquery.mmenu.min.js"></script>
+        <script type="text/javascript">
+        	$(function() {
+        		$('nav#menu').mmenu({
+              "extensions": [
+                  "fullscreen"
+              ]
+            });
+        	});
+        </script>
+        <link href="style/menu/css/style.css" rel="stylesheet" type="text/css">
+        <link href="style/menu/css/mmenu.css" rel="stylesheet" type="text/css">
+        <link href="style/menu/css/font-face.css" rel="stylesheet" type="text/css">
+
+        <link rel="stylesheet" href="style/weui.min.css"/>
+
+    </head>
+    <body style="background: url(style/background/bg0.png) 0 0 repeat;">
+
+      <div id="page" class="page" >
+
+        <!-- 侧边菜单 start -->
+        <nav id="menu" class="weui-cells" style="margin-top:0">
+            <a class="weui-cell weui-cell_access" href="javascript:;">
+              <div class="weui-cell__bd">
+                <p>cell standard</p>
+              </div>
+              <div class="weui-cell__ft1">
+              </div>
+            </a>
+            <a class="weui-cell weui-cell_access" href="javascript:;">
+              <div class="weui-cell__bd">
+                <p>cell standard</p>
+              </div>
+              <div class="weui-cell__ft1">
+              </div>
+            </a>
+            <a class="weui-cell weui-cell_access" href="javascript:;">
+              <div class="weui-cell__bd">
+                <p>cell standard</p>
+              </div>
+              <div class="weui-cell__ft1">
+              </div>
+            </a>
+        </nav>
+        <!-- 侧边菜单 end -->
+
+        <!-- 正文 -->
+        <div class="page__bd" style="padding:10px;background-color:#000000;background-color:rgba(0,0,0,0.2);">
+          <div style="text-align:center;vertical-align: middle;color:#FFFFFF;line-height:2em;font-size:110%" >BYSocket自我有限责任公司</div>
+        </div>
+
+        <div class="head-grids" style="padding-top: 10px;padding-bottom: 20px" >
+          <div style="width:100%">
+            <div class="head-grid">
+                <img src="style/index/icon_qrcode.png" style="margin:20px;width:25px;height:25px" alt="">
+            </div>
+            <div class="head-grid" >
+              <img src="http://www.bysocket.com/resume/resume-static/head-bysocket.png" style="border-radius:50%" height="150px" width="150px" alt="">
+            </div>
+            <div class="head-grid">
+                <img src="style/index/icon_share.png" style="margin:20px;width:25px;height:25px" alt="">
+            </div>
+          </div>
+        </div>
+
+        <div class="page__bd" >
+          <div style="text-align:center;font-size:30px;">子木</div>
+          <div style="text-align:center;">董事长/CEO</div>
+        </div>
+
+        <div class="weui-grids" style="margin:8%;" >
+          <a href="javascript:;" class="weui-grid" style="background-color:#000000;background-color:rgba(0,0,0,0.2);">
+              <div class="weui-grid__icon">
+                  <img src="style/index/icon_proflie.png" alt="">
+              </div>
+              <p class="weui-grid__label" style="color:#FFFFFF;">泥瓦匠简介</p>
+          </a>
+          <a href="javascript:;" class="weui-grid" style="background-color:#000000;background-color:rgba(0,0,0,0.2);">
+              <div class="weui-grid__icon">
+                  <img src="style/index/icon_information.png" alt="">
+              </div>
+              <p class="weui-grid__label" style="color:#FFFFFF;">个人信息</p>
+          </a>
+          <a href="javascript:;" class="weui-grid" style="background-color:#000000;background-color:rgba(0,0,0,0.2);">
+              <div class="weui-grid__icon">
+                  <img src="style/index/icon_company.png" alt="">
+              </div>
+              <p class="weui-grid__label" style="color:#FFFFFF;">企业介绍</p>
+          </a>
+          <a href="javascript:;" class="weui-grid" style="background-color:#000000;background-color:rgba(0,0,0,0.2);">
+              <div class="weui-grid__icon">
+                  <img src="style/index/icon_product.png" alt="">
+              </div>
+              <p class="weui-grid__label" style="color:#FFFFFF;">产品展示</p>
+          </a>
+          <a href="javascript:;" class="weui-grid" style="background-color:#000000;background-color:rgba(0,0,0,0.2);">
+              <div class="weui-grid__icon">
+                  <img src="style/index/icon_team.png" alt="">
+              </div>
+              <p class="weui-grid__label" style="color:#FFFFFF;">团队风采</p>
+          </a>
+          <a href="javascript:;" class="weui-grid" style="background-color:#000000;background-color:rgba(0,0,0,0.2);">
+              <div class="weui-grid__icon">
+                  <img src="style/index/icon_redpacket.png" alt="">
+              </div>
+              <p class="weui-grid__label" style="color:#FFFFFF;">领取红包</p>
+          </a>
+        </div>
+
+        <div class="page__bd page__bd_spacing" style="padding-bottom: 70px">
+          <a href="javascript:;" class="weui-btn weui-btn_primary" style="width: 80%;">一键拨号</a>
+        </div>
+
+        <div class="weui-tabbar" style="width: 100%;height:50px;text-align:center;vertical-align: middle;position: fixed;bottom: 0;left: 0;z-index: 9999; background-color:#000000;background-color:rgba(0,0,0,0.2);">
+            <a href="javascript:;" class="weui-tabbar__item">
+                <p class="weui-tabbar__label" style="color:#FFFFFF;font-size: 15px;padding:5px 0;">免费开店</p>
+            </a>
+            <a href="javascript:;" class="weui-tabbar__item">
+                <p class="weui-tabbar__label" style="color:#FFFFFF;font-size: 15px;padding:5px 0;">升级VIP</p>
+            </a>
+            <a href="#menu" class="weui-tabbar__item" >
+                <p class="weui-tabbar__label" style="color:#FFFFFF;font-size: 15px;padding:5px 0;">我的</p>
+            </a>
+        </div>
+      </div>
+
+    </body>
+</html>
