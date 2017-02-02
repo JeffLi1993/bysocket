@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+
+        <title>子木的微名片</title>
+
+        <!-- 顶部头像 -->
+        <style type="text/css">
+
+        .head-grids {
+          width: 100%;
+          vertical-align: middle;
+          text-align: center;
+        }
+
+        .head-grid {
+          display: inline-block;
+          vertical-align: middle;
+        }
+
+        .weui-cell__ft1 {
+          padding-right: 13px;
+        }
+
+        .weui-cell__ft1:after {
+          position: absolute;
+          top: 50%;
+          margin-top: -4px;
+          left: 200px;
+          transform: matrix(.71,.71,-.71,.71,0,0);
+          content: " ";
+          display: inline-block;
+          height: 6px;
+          width: 6px;
+          border-width: 2px 2px 0 0;
+          border-color: #c8c8cd;
+          border-style: solid;
+        }
+/*
+        .head-image {
+            height: 130px;
+            float: left;
+            width: 40%;
+            margin: 20px auto;
+            background-size: 130px 130px;
+            background-image: url(http://www.bysocket.com/resume/resume-static/head-bysocket.png);
+        }*/
+        /*环形菜单*/
+        .circle-menu {
+            position: relative;
+        }
+
+        .circle-menu ul {
+            position: relative;;
+            width: 300px;
+            height: 300px;
+            margin:20px auto;
+            padding: 0;
+            list-style: none;
+            border-radius: 50%;                                   /*  THIS IS IMPORTANT  */
+            overflow: hidden;                                     /*  THIS IS IMPORTANT  */
+        }
+
+        .circle-menu .center{
+            position: absolute;
+            top: 90px;
+            left: 130px;
+            width: 120px;
+            height: 120px;
+            z-index: 1000;
+            background: #fff;
+            border-radius: 50%;
+        }
+                                 /* Make each list item right corner to center of the menu */
+        .circle-menu li {
+            position: absolute;
+            top: -10px;                                            /*  THIS IS IMPORTANT  */
+            left: -10px;                                           /*  THIS IS IMPORTANT  */
+            width: 160px;
+            height: 160px;
+            transform-origin: 100% 100%;                           /*  THIS IS IMPORTANT  */
+            overflow: hidden;                                      /*  THIS IS IMPORTANT  */
+        }
+                                    /*   rotate deg = 360deg / count-of-item  (360/6=60deg);
+                                         skew deg = 90deg - [rotate deg]
+                                           each li rotate deg = rotate deg * li-number;
+                                    */
+        .circle-menu li:nth-child(1) {
+            transform: rotate(0deg) skew(30deg);
+        }
+        .circle-menu li:nth-child(2) {
+             transform: rotate(60deg) skew(30deg);
+        }
+        .circle-menu li:nth-child(3) {
+            transform: rotate(120deg) skew(30deg);
+        }
+        .circle-menu li:nth-child(4) {
+            transform: rotate(180deg) skew(30deg);
+        }
+        .circle-menu li:nth-child(5) {
+            transform: rotate(240deg) skew(30deg);
+        }
+        .circle-menu li:nth-child(6) {
+            transform: rotate(300deg) skew(30deg);
+        }
+                                                                  /* backflip content */
+        .circle-menu li a{
+            display: block;
+            color: #fff;
+            width: 160px;
+            height: 135px;
+            margin-top: 40px;                                     /*  THIS IS IMPORTANT  */
+            margin-left: 40px;
+            text-align: center;
+            padding-top: 40px;                    /*  THIS IS IMPORTANT  */
+            background: rgba(58, 57, 57, 0.5) url('monitor-4x.png') no-repeat 50% 40%;
+            transform: skew(-30deg) rotate(-60deg);               /*  THIS IS IMPORTANT  */
+            transition: background-color 0.5s;
+        }
+
+        .circle-menu li:nth-child(even) a {
+            background-color: rgba(58, 57, 57,0.75);
+        }
+
+        .circle-menu li a:hover {
+            background-color: rgba(58, 57, 57, 1);
+        }
+
+        /* Icons */
+
+        [class^="icon-"]:before {
+            position: absolute;
+            font-size: 3em;
+            bottom: 50%;
+            right: 35%;
+            color: rgba(240, 240, 240, 1);
+        }
+
+        </style>
+
+        <!-- 底部 bar -->
+        <script type="text/javascript">
+            $(function(){
+                $('.weui-navbar__item').on('click', function () {
+                    $(this).addClass('weui-bar__item_on').siblings('.weui-bar__item_on').removeClass('weui-bar__item_on');
+                });
+            });
+        </script>
+
+        <!-- Menu -->
+        <script src="style/menu/js/jquery-1.9.1.min.js"></script>
+        <script src="style/menu/js/jquery.mmenu.min.js"></script>
+        <script type="text/javascript">
+        	$(function() {
+        		$('nav#menu').mmenu({
+              "extensions": [
+                  "fullscreen"
+              ]
+            });
+        	});
+        </script>
+        <link href="style/menu/css/style.css" rel="stylesheet" type="text/css">
+        <link href="style/menu/css/mmenu.css" rel="stylesheet" type="text/css">
+        <link href="style/menu/css/font-face.css" rel="stylesheet" type="text/css">
+
+        <link rel="stylesheet" href="style/weui.min.css"/>
+
+    </head>
+    <body style="background: url(style/background/bg0.png) 0 0 repeat;">
+
+      <div id="page" class="page" >
+
+        <!-- 侧边菜单 start -->
+        <nav id="menu" class="weui-cells" style="margin-top:0">
+            <a class="weui-cell weui-cell_access" href="javascript:;">
+              <div class="weui-cell__bd">
+                <p>cell standard</p>
+              </div>
+              <div class="weui-cell__ft1">
+              </div>
+            </a>
+            <a class="weui-cell weui-cell_access" href="javascript:;">
+              <div class="weui-cell__bd">
+                <p>cell standard</p>
+              </div>
+              <div class="weui-cell__ft1">
+              </div>
+            </a>
+            <a class="weui-cell weui-cell_access" href="javascript:;">
+              <div class="weui-cell__bd">
+                <p>cell standard</p>
+              </div>
+              <div class="weui-cell__ft1">
+              </div>
+            </a>
+        </nav>
+        <!-- 侧边菜单 end -->
+
+        <!-- 正文 -->
+        <div class="page__bd" style="padding:10px;background-color:#000000;background-color:rgba(0,0,0,0.2);">
+          <div style="text-align:center;vertical-align: middle;color:#FFFFFF;line-height:2em;font-size:110%" >BYSocket自我有限责任公司</div>
+        </div>
+
+        <div class="head-grids" style="padding-top: 10px;padding-bottom: 20px" >
+          <div style="width:100%">
+            <div class="head-grid">
+                <img src="style/index/icon_qrcode.png" style="margin:20px;width:25px;height:25px" alt="">
+            </div>
+            <div class="head-grid" >
+              <img src="http://www.bysocket.com/resume/resume-static/head-bysocket.png" style="border-radius:50%" height="150px" width="150px" alt="">
+            </div>
+            <div class="head-grid">
+                <img src="style/index/icon_share.png" style="margin:20px;width:25px;height:25px" alt="">
+            </div>
+          </div>
+        </div>
+
+        <div class="page__bd" >
+          <div style="text-align:center;font-size:30px;">子木</div>
+          <div style="text-align:center;">董事长/CEO</div>
+        </div>
+
+        <div class="circle">
+          <nav class="circle-menu" style="display: block">
+            <div class="center" style="text-align: center;line-height: 7;">个人中心</div>
+            <ul>
+                <li><a href="#" class="icon-gist-secret"><p style="transform: rotate(60deg) ">个人信息</p></a></li>
+                <li><a href="#" class="icon-hubot"><p style="transform: rotate(0deg) ">个人信息</p></a></li>
+                <li><a href="#" class="icon-hourglass"><p style="transform: rotate(-60deg) ">个人信息</p></a></li>
+                <li><a href="#" class="icon-light-bulb"><p style="transform: rotate(-120deg) ">个人信息</p></a></li>
+                <li><a href="#" class="icon-squirrel"><p style="transform: rotate(-180deg) ">个人信息</p></a></li>
+                <li><a href="#" class="icon-law"><p style="transform: rotate(120deg) ">个人信息</p></a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="page__bd page__bd_spacing" style="padding-bottom: 70px">
+          <a href="javascript:;" class="weui-btn weui-btn_primary" style="width: 80%;">一键拨号</a>
+        </div>
+
+        <div class="weui-tabbar" style="width: 100%;height:50px;text-align:center;vertical-align: middle;position: fixed;bottom: 0;left: 0;z-index: 9999; background-color:#000000;background-color:rgba(0,0,0,0.2);">
+            <a href="javascript:;" class="weui-tabbar__item">
+                <p class="weui-tabbar__label" style="color:#FFFFFF;font-size: 15px;padding:5px 0;">免费开店</p>
+            </a>
+            <a href="javascript:;" class="weui-tabbar__item">
+                <p class="weui-tabbar__label" style="color:#FFFFFF;font-size: 15px;padding:5px 0;">升级VIP</p>
+            </a>
+            <a href="#menu" class="weui-tabbar__item" >
+                <p class="weui-tabbar__label" style="color:#FFFFFF;font-size: 15px;padding:5px 0;">我的</p>
+            </a>
+        </div>
+      </div>
+
+    </body>
+</html>
